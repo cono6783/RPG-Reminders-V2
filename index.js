@@ -56,14 +56,30 @@ client.on("message", msg => {
   if(msg.content === ";adv"){
     if(advtimer == "on") {
       setTimeout(() => {
-        msg.reply('Adventure Time!')}, 10000)
+        msg.reply('Adventure Time!')}, 12000)
     }
   }
 })
 
 //Sides Are Ready!
+//This is long because it was pinging it self
 client.on("message", msg => {
-  if(msg.content === ";forage" || ";mine"){
+  //forage
+  if(msg.content === ";forage"){
+    if(sidestimer == "on"){
+      setTimeout(() => {
+        msg.reply("Sides Are Ready!")}, 300000)
+    }
+  }
+  //chop
+   if(msg.content === ";chop"){
+    if(sidestimer == "on"){
+      setTimeout(() => {
+        msg.reply("Sides Are Ready!")}, 300000)
+    }
+  }
+  //mine
+   if(msg.content === ";mine"){
     if(sidestimer == "on"){
       setTimeout(() => {
         msg.reply("Sides Are Ready!")}, 300000)
@@ -71,4 +87,5 @@ client.on("message", msg => {
   }
 })
 
+//logging into discord
 client.login(process.env.TOKEN)
