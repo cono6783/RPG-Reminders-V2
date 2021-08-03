@@ -51,4 +51,24 @@ client.on("message", msg => {
   }
 })
 
+//Adventure Time!
+client.on("message", msg => {
+  if(msg.content === ";adv"){
+    if(advtimer == "on") {
+      setTimeout(() => {
+        msg.reply('Adventure Time!')}, 10000)
+    }
+  }
+})
+
+//Sides Are Ready!
+client.on("message", msg => {
+  if(msg.content === ";forage" || ";mine"){
+    if(sidestimer == "on"){
+      setTimeout(() => {
+        msg.reply("Sides Are Ready!")}, 300000)
+    }
+  }
+})
+
 client.login(process.env.TOKEN)
