@@ -14,8 +14,12 @@ client.on("message", msg => {
     if(msg.content === "on" || "off") {
     advsetting = msg.content.split("$advtimerset ")[1]
     advtimer = advsetting
+    
     msg.channel.send("Value changed")
     }
+  }
+  if(!advtimer) {
+    advtimer = "on"
   }
 })
 
