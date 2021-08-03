@@ -30,4 +30,25 @@ client.on("message", msg => {
   }
 })
 
+//turning sidestimer on or off
+client.on("message", msg => {
+  if(msg.content.startsWith("$sidestimerset")) {
+    if(msg.content === "on" || "off") {
+      sidessetting = msg.content.split("$sidestimerset ")[1]
+      sidestimer = sidessetting
+      msg.channel.send("Value changed")
+    }
+  }
+  if(!sidestimer) {
+    sidestimer = "on"
+  }
+})
+
+//displaying the value of sidestimer
+client.on("message", msg => {
+  if(msg.content === "$sidestimer") {
+    msg.reply(`Sidestimer is ${sidestimer}`)
+  }
+})
+
 client.login(process.env.TOKEN)
