@@ -1,4 +1,5 @@
 const Discord = require("discord.js")
+const isaping = require("./server")
 const client = new Discord.Client()
 
 var advtimer = "on"
@@ -87,5 +88,7 @@ client.on("message", msg => {
   }
 })
 
+//starting server
+isaping()
 //logging into discord
 client.login(process.env.TOKEN)
