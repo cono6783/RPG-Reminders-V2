@@ -15,12 +15,11 @@ client.on("message", msg => {
     if(msg.content === "on" || "off") {
     advsetting = msg.content.split("$advtimerset ")[1]
     advtimer = advsetting
-    
-    msg.channel.send("Value changed")
-    }
-  }
-  if(!advtimer) {
+    if(!advtimer) {
     advtimer = "on"
+    }
+    msg.channel.send(`Adventure Timer is ${advtimer}`)
+    }
   }
 })
 
@@ -37,11 +36,11 @@ client.on("message", msg => {
     if(msg.content === "on" || "off") {
       sidessetting = msg.content.split("$sidestimerset ")[1]
       sidestimer = sidessetting
-      msg.channel.send("Value changed")
+      if(!sidestimer) {
+      sidestimer = "on"
+      }
+      msg.channel.send(`Sides timer set to ${sidestimer}`)
     }
-  }
-  if(!sidestimer) {
-    sidestimer = "on"
   }
 })
 
