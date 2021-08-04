@@ -56,7 +56,7 @@ client.on("message", msg => {
   if(msg.content === ";adv"){
     if(advtimer == "on") {
       setTimeout(() => {
-        msg.reply('Adventure Time!')}, 12000)
+        msg.reply('Adventure Time!')}, 15000)
     }
   }
 })
