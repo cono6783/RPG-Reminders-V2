@@ -18,6 +18,11 @@ client.on("message", msg => {
     if(!advtimer) {
     advtimer = "on"
     }
+    if(advtimer !== "on") {
+      if(advtimer !== "off") {
+        advtimer = "on"
+      }
+    }
     msg.channel.send(`Adventure Timer is ${advtimer}`)
     }
   }
@@ -38,6 +43,11 @@ client.on("message", msg => {
       sidestimer = sidessetting
       if(!sidestimer) {
       sidestimer = "on"
+      }
+      if(sidestimer !== "on") {
+        if(sidestimer !== "off"){
+          sidestimer = "on"
+        }
       }
       msg.channel.send(`Sides timer set to ${sidestimer}`)
     }
