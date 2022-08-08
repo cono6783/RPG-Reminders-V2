@@ -74,13 +74,12 @@ client.on("message", msg => {
 })
 
 //Sides Are Ready!
-//This is long because it was pinging it self
 client.on("message", msg => {
   //forage
   if (msg.content === ";forage") {
     if (sidestimer == "on") {
       setTimeout(() => {
-        msg.reply("Sides Are Ready!")
+        msg.reply("Forage Is Ready!")
       }, 300000)
     }
   }
@@ -88,7 +87,7 @@ client.on("message", msg => {
   if (msg.content === ";chop") {
     if (sidestimer == "on") {
       setTimeout(() => {
-        msg.reply("Sides Are Ready!")
+        msg.reply("Chop Is Ready!")
       }, 300000)
     }
   }
@@ -96,14 +95,16 @@ client.on("message", msg => {
   if (msg.content === ";mine") {
     if (sidestimer == "on") {
       setTimeout(() => {
-        msg.reply("Sides Are Ready!")
+        msg.reply("Mine Is Ready!")
       }, 300000)
     }
   }
 })
 
+//why are you reading this far down
 
 //starting server
 isaping()
 //logging into discord
 client.login(process.env.TOKEN)
+//haha you  will not find my discord  login  token here
